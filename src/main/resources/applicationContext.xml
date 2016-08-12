@@ -14,8 +14,16 @@
                     http://code.alibabatech.com/schema/dubbo/dubbo.xsd  ">
 
 
-    <dubbo:application name="hello-dubbo" />
+    <dubbo:application name="hello-dubbo-service" />
+
 
     <!-- 本机 伪集群 测试 -->
+    <dubbo:registry  protocol="zookeeper"  address=""  />
+    <dubbo:protocol name="dubbo" port="20880" />
+
+
+    <bean id="demoService" class="org.dubbo.service.impl.TestServiceImpl" />
+    <dubbo:service interface="org.dubbo.service.TestService"  ref="demoService" />       <!-- 和本地bean一样实现服务 -->
+
 
 </beans>
