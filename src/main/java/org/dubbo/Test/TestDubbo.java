@@ -13,6 +13,7 @@ public class TestDubbo {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "applicationContext.xml" });
         context.start();
         System.out.println("按任意键退出");
+
         System.in.read();
     }
 }
