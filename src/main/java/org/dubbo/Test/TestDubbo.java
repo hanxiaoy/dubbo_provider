@@ -12,8 +12,7 @@ public class TestDubbo {
     public static void main(String[] args) throws  Exception{
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "applicationContext.xml" });
         context.start();
-        System.out.println("按任意键退出");
-
+        System.out.println("press any key to exit");
         System.in.read();
     }
 }

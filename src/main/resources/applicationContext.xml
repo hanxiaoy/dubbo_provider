@@ -18,7 +18,8 @@
 
 
     <!-- 本机 伪集群 测试 -->
-    <dubbo:registry  protocol="zookeeper"  address=""  />
+    <dubbo:registry  protocol="zookeeper"  address="multicast://224.5.6.7:1234"  />
+    <!--<dubbo:registry  protocol="zookeeper"  address="N/A"  />-->
     <dubbo:protocol name="dubbo" port="20880" />
 
 
